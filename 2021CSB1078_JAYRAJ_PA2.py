@@ -106,8 +106,8 @@ def myfilter(img):
 
                 
   
-img1=cv2.imread("sherlock.png",cv2.IMREAD_COLOR)
-img2=cv2.imread("watson.png",cv2.IMREAD_COLOR)
+img1=cv2.imread("img1.png",cv2.IMREAD_COLOR)
+img2=cv2.imread("img2.png",cv2.IMREAD_COLOR)
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
@@ -198,7 +198,7 @@ for i in range(frames+1):
 height,width,layers=images[0].shape
 size=(width,height)
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-out = cv2.VideoWriter('median5.mp4',fourcc, 35, size)
+out = cv2.VideoWriter('korean.mp4',fourcc, 35, size)
 for i in range(len(images)):
     out.write(images[i])
 out.release()
